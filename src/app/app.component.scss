@@ -155,6 +155,7 @@ $brown: #794d1a;
                         height: 80px;
                         background: $green;
                         border-radius: 50px;
+                        transition: 1s;
                         
                         @media (min-width: 480px) {
                             width: 100px;
@@ -165,84 +166,100 @@ $brown: #794d1a;
                             opacity: 80%;
                             top: 0;
                             left: 65px;
+                            animation: fade 20s ease-in infinite both;
                         }
             
                         &:nth-child(2) {
                             left: 128px;
                             top: 26px;
                             opacity: 60%;
+                            animation: fade 20s ease-out 2s infinite reverse both;
                         }
             
                         &:nth-child(3) {
                             bottom: 295px;
                             left: 110px;
                             opacity: 90%;
+                            animation: fade 20s ease-in 4s infinite alternate both;
                         }
         
                         &:nth-child(4) {
                             bottom: 332px;
                             left: 26px;
+                            animation: fade 20s ease-in 6s infinite alternate-reverse both;
                         }
         
                         &:nth-child(5) {
                             bottom: 336px;
                             left: 70px;
                             opacity: 65%;
+                            animation: fade 20s ease-in 8s infinite both;
                         }
         
                         &:nth-child(6) {
                             bottom: 280px;
                             right: 104px;
                             opacity: 85%;
+                            animation: fade 20s ease-out infinite reverse both;
                         }
                         
                         &:nth-child(7) {
                             top: 0;
                             right: 152px;
+                            animation: fade 20s ease-in 2s infinite both;
+
                         }
         
                         &:nth-child(8) {
                             top: 42px;
                             right: 116px;
                             opacity: 85%;
+                            animation: fade 20s ease-in-out 4s infinite alternate both;
                         }
         
                         &:nth-child(9) {
                             bottom: 288px;
                             opacity: 90%;
+                            animation: fade 20s ease-out 6s infinite alternate-reverse both;
                         }
         
                         &:nth-child(10) {
                             bottom: 380px;
                             opacity: 75%;
+                            animation: fade 20s ease-in 8s infinite reverse both;
                         }
         
                         &:nth-child(11) {
                             right: 50px;
                             bottom: 350px;
                             opacity: 50%;
+                            animation: fade 20s 10s infinite both ease-in;
                         }
         
                         &:nth-child(12) {
                             bottom: 278px;
                             right: 40px;
+                            animation: fade 20s 15s infinite both ease-in;
                         }
         
                         &:nth-child(13) {
                             bottom: 350px;
                             right: 85px;
+                            animation: fade 20s 20s infinite both ease-in;
                         }
         
                         &:nth-child(14) {
                             top: 28px;
                             right: 40px;
                             opacity: 85%;
+                            animation: fade 20s 5s infinite both ease-in;
                         }
         
                         &:nth-child(15) {
                             top: 48px;
                             left: 18px;
                             opacity: 55%;
+                            animation: fade 20s 10s infinite both ease-in;
                         }
                     }
                 }
@@ -278,4 +295,11 @@ $brown: #794d1a;
     10% { transform: translateY(-10px) }
     20% { transform: translateY(0px) }
     50%, 100% { transform: translateY(0px)}
+}
+
+@keyframes fade {
+    0% { opacity: 30% }
+    40% { opacity: 40% }
+    60% { opacity: 80% }
+    100% { opacity: 60% }
 }
