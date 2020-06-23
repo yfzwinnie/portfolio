@@ -8,39 +8,54 @@ $brown: #794d1a;
     justify-content: center;
     position: relative;
     height: 100vh;
-    width: 100vw;
 
     .sky {
-        height: 20vh;
-
         .cloud {
-            width: 200px;
+            width: 100px;
             background: $light-purple;
-            height: 80px;
+            height: 40px;
             position: absolute;
-            top: 60px;
+            top: 30px;
             border-radius: 50px;
             
+            @media (min-width: 480px) {
+                width: 200px;
+                top: 60px;
+                height: 80px;
+            }
+
             &:after {
                 content: "";
-                width: 50px;
-                height: 50px;
+                width: 25px;
+                height: 25px;
                 border-radius: 25px;
                 position: absolute;
                 background: $light-purple;
-                bottom: 55px;
-                left: 110px;
+                bottom: 30px;
+                left: 20px;
+
+                @media (min-width: 480px) {
+                    width: 50px;
+                    height: 50px;
+                    bottom: 55px;
+                    left: 110px;
+                }
             }
     
             &:before {
                 content: "";
-                width: 100px;
-                height: 100px;
+                width: 50px;
+                height: 50px;
                 border-radius: 50px;
                 position: absolute;
                 background: $light-purple;
                 bottom: 15px;
                 left: 38px;
+
+                @media (min-width: 480px) {
+                    width: 100px;
+                    height: 100px;
+                }
             }
     
             &:first-child {
@@ -48,24 +63,40 @@ $brown: #794d1a;
             }
     
             &:nth-child(2) {
-                animation: sky 80s linear 15s infinite both;
-                top: 100px;
-                transform: scale(0.5);
+                animation: sky 80s linear 20s infinite both;
+                top: 50px;
+                transform: scale(.5, .5);
+
+                @media (min-width: 480px) {
+                    top: 100px;
+                }
             }
         }
     }
 
     .main {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
         align-items: center;
         height: 100vh;
         width: 100vw;
+        flex-direction: column;
+
+        @media (min-width: 480px) {
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
         
         .introduction {
             display: flex;
             flex-direction: column;
             color: $light-purple;
+            align-items: center;
+
+            @media (min-width: 480px) {
+                align-items: flex-start;
+                padding-left: 20px;
+            }
             
             .name {
                 font-size: 56px;
@@ -79,7 +110,13 @@ $brown: #794d1a;
 
             #see-more-btn {
                 position: absolute;
-                bottom: 10%;
+                bottom: 4%;
+                display: flex;
+                align-items: center;
+                @media (min-width: 480px) {
+                    bottom: 20%;
+                }
+
                 button {
                     background-color: transparent;
                     border: none;
@@ -87,7 +124,8 @@ $brown: #794d1a;
                     font-size: 18px;
                     font-family: 'Gruppo', cursive;
                     cursor: pointer;
-                    animation: bounce 5s infinite both linear;
+                    animation: bounce 5s linear infinite both;
+                    margin-left: 5px;
                 }
             }
         }
@@ -286,15 +324,15 @@ $brown: #794d1a;
 }
 
 @keyframes sky {
-    from { transform: translateX(-250px)}
-    to { transform: translateX(1250px) }
+    from { transform: translateX(-15vw)}
+    to { transform: translateX(80vw) }
 }
 
 @keyframes bounce {
-    0% { transform: translateY(0px) }
-    10% { transform: translateY(-10px) }
-    20% { transform: translateY(0px) }
-    50%, 100% { transform: translateY(0px)}
+    0% { transform: translateX(0px) }
+    10% { transform: translateX(10px) }
+    20% { transform: translateX(0px) }
+    50%, 100% { transform: translateX(0px)}
 }
 
 @keyframes fade {
