@@ -1,0 +1,21 @@
+@import '../../colors';
+
+section {
+    height: 100vh;
+    padding: 60px;
+    background-color: $light-purple;
+
+    .content {
+        display: flex;
+        justify-content: space-around;
+        padding: 40px;
+        border-radius: 20px;
+        background-color: $blue;
+
+        .skills {
+            flex-basis: 50%;
+            opacity: .1;
+            background-color: $green;
+        }
+    }
+}

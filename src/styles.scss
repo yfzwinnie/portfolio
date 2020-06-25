@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import './colors';
 
-body {
-    background-color: #1F2254;
-    font-family: 'Gruppo', cursive;
+html {
+    scroll-behavior: smooth;
+    
+    body {
+        background-color: $blue;
+        font-family: 'Gruppo', cursive;
+        margin: 0;
+    }
 }
