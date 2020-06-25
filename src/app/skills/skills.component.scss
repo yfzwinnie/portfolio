@@ -1,10 +1,8 @@
 @import '../../colors';
 
-section {
-    height: 100vh;
-    padding: 60px;
-    background-color: $light-purple;
-
+#skills {
+    background-color: $blue;
+    
     .content {
         display: flex;
         justify-content: space-around;
