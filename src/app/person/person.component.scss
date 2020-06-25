@@ -1,6 +1,7 @@
 .person {
     position: relative;
-    width: 250px;
+    width: 330px;
+    
     .face {
         width: 50px;
         height: 100px;
@@ -88,8 +89,8 @@
             width: 72px;
             height: 65px;
             position: absolute;
-            right: 42px;
-            top: 112px;
+            left: 135px;
+            top: 111px;
 
             .back-hair-spot {
                 height: 0;

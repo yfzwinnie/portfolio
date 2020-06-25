@@ -1,12 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
-@import './colors';
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+@import "./colors";
 
 html {
-    scroll-behavior: smooth;
-    
-    body {
-        background-color: $blue;
-        font-family: 'Gruppo', cursive;
-        margin: 0;
+  scroll-behavior: smooth;
+
+  body {
+    background-color: $blue;
+    font-family: "Gruppo", cursive;
+    margin: 0;
+
+    section {
+      height: 100vh;
+      padding: 60px;
+      background-color: $light-purple;
+
+      .typewriter {
+        border-right: solid 3px slategray;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 28px;
+        color: slategray;
+        animation: animated-text 4s steps(29, end) 1s 1 normal both,
+        animated-cursor 1s steps(29, end);
+      }
     }
+  }
+}
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: slategray;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
