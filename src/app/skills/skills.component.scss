@@ -2,18 +2,18 @@
 
 #skills {
     background-color: $blue;
-    
+
     .content {
         display: flex;
-        justify-content: space-around;
-        padding: 40px;
-        border-radius: 20px;
         background-color: $blue;
+        flex-wrap: wrap;
 
-        .skills {
-            flex-basis: 50%;
+        .skill {
+            flex-basis: calc(50% - 10px);
             opacity: .1;
-            background-color: $green;
+            background-color: $light-purple;
+            margin-bottom: 10px;
+            margin-right: 10px;
         }
     }
 }
